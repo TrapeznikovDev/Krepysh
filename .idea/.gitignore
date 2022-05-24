@@ -1,0 +1,6 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/.idea
+/app/src/main/java/utils/BaseUrl.kt
+/app/src/main/java/di/retrofit/Api

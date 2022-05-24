@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewKrepysh</string>
+    <string name="title_home">Комната</string>
+    <string name="title_dashboard">Новости</string>
+    <string name="title_notifications">Настройки</string>
+    <string name="phone_number_text">Номер телефона</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/background_grey">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/bubbles_homef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/parent_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="ОСОЗНАННЫЙ РОДИТЕЛЬ"
+        android:textColor="@color/text_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/parent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Лариса Титова"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/parent_type"
+        app:layout_constraintTop_toBottomOf="@+id/parent_type" />
+
+    <TextView
+        android:id="@+id/krepysh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="КРЕПЫШИ"
+        android:textColor="@color/text_orange"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/parent_name"
+        app:layout_constraintTop_toBottomOf="@+id/parent_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:alpha="0.8"
+        android:id="@+id/recycler_parent_kids"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/krepysh_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
