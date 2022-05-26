@@ -1,6 +1,7 @@
-package com.example.newkrepysh
+package com.example.newkrepysh.modules
 
 import androidx.lifecycle.ViewModel
+import com.example.newkrepysh.ViewModelKey
 import com.example.newkrepysh.activities.AuthActivityViewModel
 
 import com.example.newkrepysh.ui.dashboard.DashboardViewModel

@@ -1,8 +1,8 @@
-package com.example.newkrepysh
+package com.example.newkrepysh.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.newkrepysh.activities.AuthActivity
+import com.example.newkrepysh.R
 import com.example.newkrepysh.ui.main.MainActivity
 import com.example.newkrepysh.utils.TokenProvider
 import com.example.newkrepysh.utils.replaceActivity

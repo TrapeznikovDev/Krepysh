@@ -1,7 +1,8 @@
-package com.example.newkrepysh.di.uicomponents
+package com.example.newkrepysh.modules
 
 import android.app.Activity
 import android.content.Context
+import com.example.newkrepysh.di.uicomponents.PerActivity
 import dagger.Module
 import dagger.Provides
 
