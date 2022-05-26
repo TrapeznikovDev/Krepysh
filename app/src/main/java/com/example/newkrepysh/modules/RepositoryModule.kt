@@ -1,4 +1,4 @@
-package com.example.newkrepysh.di.repository
+package com.example.newkrepysh.modules
 
 import com.example.newkrepysh.di.retrofit.Api
 import com.example.newkrepysh.local.Repository

@@ -15,6 +15,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         var v = KidsItemLayoutBinding.inflate(LayoutInflater.from(parent.context))
         v.root.layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+
         return HomeViewHolder(v, parent.context)
     }
 

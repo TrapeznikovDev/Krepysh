@@ -1,16 +1,16 @@
-package com.example.newkrepysh.di.retrofit
+package com.example.newkrepysh.modules
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import com.example.newkrepysh.BuildConfig
+import com.example.newkrepysh.di.retrofit.Api
 import com.example.newkrepysh.utils.TokenProvider
 import com.example.newkrepysh.utils.baseUrl
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter

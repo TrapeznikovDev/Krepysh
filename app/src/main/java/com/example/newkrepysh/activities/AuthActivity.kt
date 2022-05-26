@@ -29,8 +29,8 @@ class AuthActivity : AppCompatActivity() {
     @Inject
 
     lateinit var factory: ViewModelFactory
-
     private val model: AuthActivityViewModel by viewModels { factory }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ComponentManager.instance.getActivityComponent(this).inject(this)
@@ -53,7 +53,6 @@ class AuthActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 model.auth(pass, phone, this@AuthActivity)
             }
-            //replaceActivity(MainActivity())
         }
         model.liveDataAuth.observe(this){
             println(it)

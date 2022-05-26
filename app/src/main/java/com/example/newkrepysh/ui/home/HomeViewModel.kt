@@ -21,16 +21,11 @@ class HomeViewModel @Inject constructor(
     val repository: Repository,
 ) : ViewModel() {
 
+    var parent = MutableLiveData<User?>()
+
+
     private var _list = MutableLiveData<List<User?>>()
     var list: LiveData<List<User?>> = _list
-
-//    fun getKidsFromDb() {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            _list.postValue(repository.getKidsFromDb().map { it.user }.toList())
-//
-//        }
-
-//    }
 
     suspend fun getUserFromApi() {
         repository.putUserToDb()
@@ -45,6 +40,7 @@ class HomeViewModel @Inject constructor(
                 println(it?.media)
             }
             _list.postValue(users)
+            parent.postValue(repository.parent)
             withContext(Dispatchers.Main){
 
             }

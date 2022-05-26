@@ -1,13 +1,10 @@
-package com.example.newkrepysh.local
+package com.example.newkrepysh.modules
 
 import android.app.Application
-import androidx.lifecycle.ViewModel
-import androidx.room.Room
 import androidx.room.Room.databaseBuilder
-import dagger.Binds
+import com.example.newkrepysh.local.RoomApp
 import dagger.Module
 import dagger.Provides
-import dagger.multibindings.IntoMap
 import javax.inject.Singleton
 
 

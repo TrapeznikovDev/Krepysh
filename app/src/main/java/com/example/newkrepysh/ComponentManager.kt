@@ -4,11 +4,13 @@ import android.app.Activity
 import android.app.Application
 import androidx.fragment.app.Fragment
 import com.example.newkrepysh.di.AppComponent
-import com.example.newkrepysh.di.AppModule
+import com.example.newkrepysh.modules.AppModule
 import com.example.newkrepysh.di.DaggerAppComponent
-import com.example.newkrepysh.di.retrofit.RetrofitModule
+import com.example.newkrepysh.modules.RetrofitModule
 import com.example.newkrepysh.di.uicomponents.*
-import com.example.newkrepysh.local.RoomModule
+import com.example.newkrepysh.modules.ActivityModule
+import com.example.newkrepysh.modules.FragmentModule
+import com.example.newkrepysh.modules.RoomModule
 
 class ComponentManager {
 

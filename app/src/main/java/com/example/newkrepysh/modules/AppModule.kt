@@ -1,7 +1,8 @@
-package com.example.newkrepysh.di
+package com.example.newkrepysh.modules
 
 import android.app.Application
 import android.content.Context
+import com.example.newkrepysh.di.AppContext
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

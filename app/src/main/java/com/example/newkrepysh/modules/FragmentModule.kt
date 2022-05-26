@@ -1,5 +1,6 @@
-package com.example.newkrepysh.di.uicomponents
+package com.example.newkrepysh.modules
 
+import com.example.newkrepysh.di.uicomponents.PerFragment
 import com.example.newkrepysh.ui.dashboard.DashboardFragment
 import com.example.newkrepysh.ui.home.HomeFragment
 import com.example.newkrepysh.ui.notifications.NotificationsFragment
