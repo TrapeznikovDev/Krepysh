@@ -1,19 +1,15 @@
 package com.example.newkrepysh.ui.home
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-
 import com.example.newkrepysh.entities.User
 import com.example.newkrepysh.local.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.*
-import java.io.IOException
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
@@ -44,6 +40,7 @@ class HomeViewModel @Inject constructor(
             withContext(Dispatchers.Main){
 
             }
+
         }
     }
 

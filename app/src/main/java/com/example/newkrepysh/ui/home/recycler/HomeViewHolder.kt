@@ -12,11 +12,10 @@ import com.example.newkrepysh.entities.User
 
 class HomeViewHolder(item: KidsItemLayoutBinding, var context: Context): RecyclerView.ViewHolder(item.root) {
 
-    private val itemView = item
-
     private val name by lazy { item.kidName }
     private val secondName by lazy { item.kidSecondName }
     private val image by lazy { item.kidPhoto }
+    
 
     fun bind(user: User?){
         itemView.setPadding(0, 10, 0, 0)

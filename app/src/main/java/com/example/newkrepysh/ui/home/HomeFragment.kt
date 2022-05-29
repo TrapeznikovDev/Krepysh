@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newkrepysh.ComponentManager
 import com.example.newkrepysh.R
 import com.example.newkrepysh.databinding.FragmentHomeBinding
-import com.example.newkrepysh.di.AppComponent
-import com.example.newkrepysh.entities.User
 import com.example.newkrepysh.factory.ViewModelFactory
 import com.example.newkrepysh.ui.home.recycler.HomeAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
 class HomeFragment : Fragment() {
@@ -44,7 +41,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         with(binding){
             val decoration = DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
-            requireContext().getDrawable(R.drawable.ivider_decoration)
+            requireContext().getDrawable(R.drawable.divider_decoration)
                 ?.let { decoration.setDrawable(it) }
             recyclerParentKids.addItemDecoration(decoration)
             recyclerParentKids.adapter = adapter

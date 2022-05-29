@@ -4,6 +4,7 @@ import com.example.newkrepysh.di.uicomponents.PerFragment
 import com.example.newkrepysh.ui.dashboard.DashboardFragment
 import com.example.newkrepysh.ui.home.HomeFragment
 import com.example.newkrepysh.ui.notifications.NotificationsFragment
+import com.example.newkrepysh.ui.profile.KidsProfileFragment
 import dagger.Module
 import dagger.Provides
 
@@ -21,6 +22,10 @@ class FragmentModule {
     @Provides
     @PerFragment
     fun notificationsFragment() = NotificationsFragment()
+
+    @Provides
+    @PerFragment
+    fun kidsProfileFragment() = KidsProfileFragment()
 
 
 

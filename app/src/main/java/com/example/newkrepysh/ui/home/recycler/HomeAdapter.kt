@@ -21,6 +21,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         holder.bind(list[position])
+
     }
 
     override fun getItemCount(): Int {

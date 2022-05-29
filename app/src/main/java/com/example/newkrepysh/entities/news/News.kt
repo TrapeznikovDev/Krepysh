@@ -2,16 +2,19 @@ package com.example.newkrepysh.entities.news
 
 import com.google.gson.annotations.SerializedName
 
+
 data class News(
-    @SerializedName("id"                ) var id               : Int?              = null,
-    @SerializedName("school_id"         ) var schoolId         : Int?              = null,
-    @SerializedName("header"            ) var header           : String?           = null,
-    @SerializedName("short_description" ) var shortDescription : String?           = null,
-    @SerializedName("full_description"  ) var fullDescription  : String?           = null,
-    @SerializedName("active"            ) var active           : Int?              = null,
-    @SerializedName("created_by"        ) var createdBy        : Int?              = null,
-    @SerializedName("updated_by"        ) var updatedBy        : Int?              = null,
-    @SerializedName("created_at"        ) var createdAt        : String?           = null,
-    @SerializedName("updated_at"        ) var updatedAt        : String?           = null,
-    @SerializedName("media"             ) var media            : ArrayList<String> = arrayListOf()
+    @SerializedName("current_page"   ) var currentPage  : Int?             = null,
+    @SerializedName("data"           ) var data         : ArrayList<DataForNews>  = arrayListOf(),
+    @SerializedName("first_page_url" ) var firstPageUrl : String?          = null,
+    @SerializedName("from"           ) var from         : Int?             = null,
+    @SerializedName("last_page"      ) var lastPage     : Int?             = null,
+    @SerializedName("last_page_url"  ) var lastPageUrl  : String?          = null,
+    @SerializedName("links"          ) var links        : ArrayList<Links> = arrayListOf(),
+    @SerializedName("next_page_url"  ) var nextPageUrl  : String?          = null,
+    @SerializedName("path"           ) var path         : String?          = null,
+    @SerializedName("per_page"       ) var perPage      : Int?             = null,
+    @SerializedName("prev_page_url"  ) var prevPageUrl  : String?          = null,
+    @SerializedName("to"             ) var to           : Int?             = null,
+    @SerializedName("total"          ) var total        : Int?             = null
 )
