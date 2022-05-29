@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.8"
+    app:cardCornerRadius="14dp">
+
+
+        <ImageView
+            android:id="@+id/news_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="?android:attr/colorEdgeEffect"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:layout_constraintStart_toEndOf="@+id/news_photo"
+            app:layout_constraintTop_toTopOf="@+id/news_photo" />
+
+        <TextView
+            android:id="@+id/description_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/news_photo"
+            app:layout_constraintTop_toBottomOf="@+id/title_news" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
