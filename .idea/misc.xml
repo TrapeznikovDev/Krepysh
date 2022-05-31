@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_btn_map.xml" value="0.2875" />
         <entry key="app/src/main/res/drawable/divider_decoration.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.302" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.165" />
@@ -19,7 +20,7 @@
         <entry key="app/src/main/res/layout/error_auth_layout.xml" value="0.33061594202898553" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3392210144927536" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_kids_profile.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_kids_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_news_description.xml" value="0.33061594202898553" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.3392210144927536" />
         <entry key="app/src/main/res/layout/kids_item_layout.xml" value="0.3392210144927536" />

@@ -53,6 +53,8 @@ class Repository  @Inject constructor(val db: RoomApp, val api: Api){
         }
         return ErrorHandler.success
     }
+
+    fun getChildBuId(id: Int)= db.dao().getChildById(id)
 }
 
 enum class ErrorHandler{

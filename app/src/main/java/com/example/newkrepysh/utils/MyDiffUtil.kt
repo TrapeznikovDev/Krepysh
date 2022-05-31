@@ -1,11 +1,12 @@
 package com.example.newkrepysh.utils
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
 
 class MyDiffUtil(
-    private var oldList: List<User?>,
-    private var newList: List<User?>
+    private var oldList: List<Childs?>,
+    private var newList: List<Childs?>
 ): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldList.size

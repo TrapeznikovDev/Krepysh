@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
 import com.example.newkrepysh.local.Repository
 import kotlinx.coroutines.Dispatchers
@@ -20,8 +21,8 @@ class HomeViewModel @Inject constructor(
     var parent = MutableLiveData<User?>()
 
 
-    private var _list = MutableLiveData<List<User?>>()
-    var list: LiveData<List<User?>> = _list
+    private var _list = MutableLiveData<List<Childs?>>()
+    var list: LiveData<List<Childs?>> = _list
 
     suspend fun getUserFromApi() {
         repository.putUserToDb()
@@ -31,11 +32,8 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             getUserFromApi()
             val kids = repository.getKidsFromDb()
-            val users = kids.map { it.user }
-            users.forEach {
-                println(it?.media)
-            }
-            _list.postValue(users)
+
+            _list.postValue(kids)
             parent.postValue(repository.parent)
             withContext(Dispatchers.Main){
 

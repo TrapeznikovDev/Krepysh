@@ -12,7 +12,6 @@ import com.example.newkrepysh.ComponentManager
 import com.example.newkrepysh.databinding.FragmentDashboardBinding
 import com.example.newkrepysh.entities.news.DataForNews
 import com.example.newkrepysh.factory.ViewModelFactory
-import com.example.newkrepysh.ui.NewsDescriptionFragment
 import com.example.newkrepysh.ui.dashboard.recycler.NewsAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

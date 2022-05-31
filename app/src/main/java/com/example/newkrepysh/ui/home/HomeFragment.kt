@@ -6,25 +6,29 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newkrepysh.ComponentManager
 import com.example.newkrepysh.R
 import com.example.newkrepysh.databinding.FragmentHomeBinding
+import com.example.newkrepysh.entities.Childs
+import com.example.newkrepysh.entities.User
+import com.example.newkrepysh.entities.news.DataForNews
 import com.example.newkrepysh.factory.ViewModelFactory
+import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapter
+import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapterForKid
 import com.example.newkrepysh.ui.home.recycler.HomeAdapter
 import javax.inject.Inject
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), PerformClickFromAdapterForKid {
 
     private var _binding: FragmentHomeBinding? = null
     private lateinit var adapter: HomeAdapter
-
     @Inject
-
     lateinit var factory: ViewModelFactory
-
     private val model: HomeViewModel by viewModels { factory }
+    var list : List<Childs>? = listOf()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -35,9 +39,8 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        adapter = HomeAdapter()
         ComponentManager.instance.getFragmentComponent(this).inject(this)
-        adapter = HomeAdapter()
+        adapter = HomeAdapter(this)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         with(binding){
             val decoration = DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
@@ -50,6 +53,10 @@ class HomeFragment : Fragment() {
         }
         val root: View = binding.root
         return root
+    }
+
+    override fun navigate(pos: Int, userId: Int) {
+        findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToKidsProfileFragment(pos, userId))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

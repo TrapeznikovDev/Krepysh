@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newkrepysh.R
 import com.example.newkrepysh.databinding.KidsItemLayoutBinding
+import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
 
 class HomeViewHolder(item: KidsItemLayoutBinding, var context: Context): RecyclerView.ViewHolder(item.root) {
@@ -17,13 +18,13 @@ class HomeViewHolder(item: KidsItemLayoutBinding, var context: Context): Recycle
     private val image by lazy { item.kidPhoto }
     
 
-    fun bind(user: User?){
+    fun bind(user: Childs?){
         itemView.setPadding(0, 10, 0, 0)
-        name.text = user?.firstName
-        secondName.text = user?.secondName
-        println(user?.media)
+        name.text = user?.user?.firstName
+        secondName.text = user?.user?.secondName
+        println(user?.user?.media)
         Glide.with(context)
-            .load(user?.media?.firstOrNull()?.url?.profileThumb)
+            .load(user?.user?.media?.firstOrNull()?.url?.profileThumb)
             .into(image)
     }
 }

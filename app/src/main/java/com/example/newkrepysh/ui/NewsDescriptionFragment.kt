@@ -20,6 +20,7 @@ class NewsDescriptionFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentNewsDescriptionBinding.inflate(inflater, container, false)
         val args = this.arguments?.getString("someArgs")
+        binding.fullDesc.text = args
         binding.performBackBtn.setOnClickListener {
             findNavController().popBackStack()
         }

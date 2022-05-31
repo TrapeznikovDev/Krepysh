@@ -6,9 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.KidsProfileFragment">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/perform_back_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/kid_profile_recycler"
@@ -17,7 +40,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
 
         <ImageView
             android:id="@+id/kid_profile_photo"
@@ -34,7 +57,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Имя Фамилия"
             android:textColor="@color/text_orange"
             android:textSize="20sp"
             android:fontFamily="@font/bip"
@@ -53,6 +75,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kid_profile_name" />
 
+        <TextView
+            android:id="@+id/place_in_school_number"
+            android:textColor="@color/text_orange"
+
+            android:fontFamily="@font/bip"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/view1"
+            app:layout_constraintStart_toStartOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/view1" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="В ШКОЛЕ"
+            android:textColor="@color/text_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view1"
+            app:layout_constraintEnd_toEndOf="@+id/view1"
+            app:layout_constraintStart_toStartOf="@+id/view1" />
+
         <View
             android:id="@+id/view2"
             android:layout_width="110dp"
@@ -63,6 +110,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view1" />
 
+        <TextView
+            android:id="@+id/place_in_city_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/bip"
+
+            android:textColor="@color/text_orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="В ГОРОДЕ"
+            android:textColor="@color/text_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2" />
+
         <View
             android:id="@+id/view3"
             android:layout_width="110dp"
@@ -72,6 +144,30 @@
             android:backgroundTint="@color/background_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/place_in_country_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/bip"
+            android:textColor="@color/text_orange"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="В СТРАНЕ"
+            android:textColor="@color/text_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3" />
 
 
         <com.github.mikephil.charting.charts.LineChart

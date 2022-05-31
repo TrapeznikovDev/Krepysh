@@ -30,4 +30,8 @@ interface Dao {
     @Query("SELECT * FROM CHILDS")
     fun getChild(): List<Childs>
 
+    @Query("SELECT * FROM CHILDS where id=:id")
+    fun getChildById(id: Int): Childs
+
+
 }

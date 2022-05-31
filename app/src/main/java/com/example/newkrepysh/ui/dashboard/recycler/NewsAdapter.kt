@@ -25,6 +25,7 @@ class NewsAdapter(var onClick: PerformClickFromAdapter): RecyclerView.Adapter<Ne
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         holder.bind(list?.get(position))
+
         holder.itemView.setOnClickListener {
             onClick.navigate(position)
         }
