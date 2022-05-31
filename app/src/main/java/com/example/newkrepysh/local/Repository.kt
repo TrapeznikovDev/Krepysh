@@ -5,6 +5,7 @@ import com.example.newkrepysh.di.retrofit.Api
 import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
 import com.example.newkrepysh.entities.auth.AuthBody
+import com.example.newkrepysh.entities.news.News
 import com.example.newkrepysh.utils.TokenProvider
 import javax.inject.Inject
 
@@ -34,7 +35,6 @@ class Repository  @Inject constructor(val db: RoomApp, val api: Api){
         return db.dao().getUser(id)
     }
 
-
     suspend fun auth(body: AuthBody, context: Context): ErrorHandler{
         val resp = api.auth(body)
         if (resp.code()==200){
@@ -53,6 +53,8 @@ class Repository  @Inject constructor(val db: RoomApp, val api: Api){
         }
         return ErrorHandler.success
     }
+
+    fun getChildBuId(id: Int)= db.dao().getChildById(id)
 }
 
 enum class ErrorHandler{

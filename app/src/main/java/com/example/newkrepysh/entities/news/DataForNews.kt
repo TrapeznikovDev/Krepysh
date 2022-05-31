@@ -2,7 +2,7 @@ package com.example.newkrepysh.entities.news
 
 import com.google.gson.annotations.SerializedName
 
-data class DataNews(
+data class DataForNews(
     @SerializedName("id"                ) var id               : Int?              = null,
     @SerializedName("school_id"         ) var schoolId         : Int?              = null,
     @SerializedName("header"            ) var header           : String?           = null,

@@ -7,6 +7,7 @@ import com.example.newkrepysh.modules.FragmentModule
 import com.example.newkrepysh.ui.dashboard.DashboardFragment
 import com.example.newkrepysh.ui.home.HomeFragment
 import com.example.newkrepysh.ui.notifications.NotificationsFragment
+import com.example.newkrepysh.ui.profile.KidsProfileFragment
 import dagger.Component
 
 @PerFragment
@@ -20,4 +21,5 @@ interface FragmentComponent {
     fun inject(fragment: DashboardFragment)
     fun inject(fragment: HomeFragment)
     fun inject(fragment: NotificationsFragment)
+    fun inject(fragment: KidsProfileFragment)
 }

@@ -7,6 +7,7 @@ import com.example.newkrepysh.activities.AuthActivityViewModel
 import com.example.newkrepysh.ui.dashboard.DashboardViewModel
 import com.example.newkrepysh.ui.home.HomeViewModel
 import com.example.newkrepysh.ui.notifications.NotificationsViewModel
+import com.example.newkrepysh.ui.profile.KidsProfileViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -35,5 +36,9 @@ abstract class ViewModelModule {
     @ViewModelKey(AuthActivityViewModel::class)
     internal abstract fun authActivityViewModel(authActivityViewModel: AuthActivityViewModel): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(KidsProfileViewModel::class)
+    internal abstract fun kidsProfileViewModel(kidsProfileViewModel: KidsProfileViewModel): ViewModel
 
 }

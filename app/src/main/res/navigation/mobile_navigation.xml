@@ -9,18 +9,51 @@
         android:id="@+id/navigation_home"
         android:name="com.example.newkrepysh.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_kidsProfileFragment"
+            app:destination="@id/kidsProfileFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.newkrepysh.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_newsDescriptionFragment"
+            app:destination="@id/newsDescriptionFragment" />
+        <argument
+            android:name="somebody"
+            android:defaultValue="arg"
+            app:argType="string"/>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.newkrepysh.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/newsDescriptionFragment"
+        android:name="com.example.newkrepysh.ui.NewsDescriptionFragment"
+        android:label="fragment_news_description"
+        tools:layout="@layout/fragment_news_description" >
+        <argument
+            android:name="someArgs"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/kidsProfileFragment"
+        android:name="com.example.newkrepysh.ui.profile.KidsProfileFragment"
+        android:label="fragment_kids_profile"
+        tools:layout="@layout/fragment_kids_profile" >
+        <argument
+            android:name="child_id"
+            app:argType="integer" />
+        <argument android:name="user_id"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

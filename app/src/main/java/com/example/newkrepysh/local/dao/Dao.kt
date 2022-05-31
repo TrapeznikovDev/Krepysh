@@ -7,6 +7,8 @@ import androidx.room.Query
 import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.Media
 import com.example.newkrepysh.entities.User
+import com.example.newkrepysh.entities.news.DataNews
+import com.example.newkrepysh.entities.news.News
 
 @Dao
 interface Dao {
@@ -28,7 +30,8 @@ interface Dao {
     @Query("SELECT * FROM CHILDS")
     fun getChild(): List<Childs>
 
-
+    @Query("SELECT * FROM CHILDS where id=:id")
+    fun getChildById(id: Int): Childs
 
 
 }

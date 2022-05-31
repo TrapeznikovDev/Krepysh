@@ -5,12 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newkrepysh.databinding.KidsItemLayoutBinding
+import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
+import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapter
+import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapterForKid
 import com.example.newkrepysh.utils.MyDiffUtil
 
-class HomeAdapter : RecyclerView.Adapter<HomeViewHolder>() {
+class HomeAdapter(var onClick: PerformClickFromAdapterForKid) : RecyclerView.Adapter<HomeViewHolder>() {
 
-    var list = listOf<User?>()
+    var list = listOf<Childs?>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         var v = KidsItemLayoutBinding.inflate(LayoutInflater.from(parent.context))
@@ -21,13 +24,17 @@ class HomeAdapter : RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         holder.bind(list[position])
+
+        holder.itemView.setOnClickListener {
+            onClick.navigate(list.get(position)?.id?: 0, list.get(position)?.userId?: 0)
+        }
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
 
-    fun setData(newPersonalList: List<User?>) {
+    fun setData(newPersonalList: List<Childs?>) {
         val diffUtil = MyDiffUtil(list, newPersonalList)
         val difResults = DiffUtil.calculateDiff(diffUtil)
         list = newPersonalList
