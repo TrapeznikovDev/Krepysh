@@ -5,7 +5,6 @@ import com.example.newkrepysh.di.retrofit.Api
 import com.example.newkrepysh.entities.Childs
 import com.example.newkrepysh.entities.User
 import com.example.newkrepysh.entities.auth.AuthBody
-import com.example.newkrepysh.entities.news.News
 import com.example.newkrepysh.utils.TokenProvider
 import javax.inject.Inject
 

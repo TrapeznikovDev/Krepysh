@@ -7,7 +7,6 @@
     tools:context=".ui.profile.KidsProfileFragment">
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
@@ -57,9 +57,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/bip"
             android:textColor="@color/text_orange"
             android:textSize="20sp"
-            android:fontFamily="@font/bip"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kid_profile_photo" />
@@ -77,13 +77,13 @@
 
         <TextView
             android:id="@+id/place_in_school_number"
-            android:textColor="@color/text_orange"
-
-            android:fontFamily="@font/bip"
-            android:textSize="20sp"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/bip"
+            android:textColor="@color/text_orange"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/view1"
             app:layout_constraintStart_toStartOf="@+id/view1"
             app:layout_constraintTop_toTopOf="@+id/view1" />
@@ -183,21 +183,79 @@
 
         <ProgressBar
             android:id="@+id/working_out_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/shape_circle_background"
+            android:progressDrawable="@drawable/shape_circular_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/points_progress_bar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lineChart" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ОТРАБОТКИ"
+            android:textColor="@color/text_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/working_out_progress_bar"
+            app:layout_constraintEnd_toEndOf="@+id/working_out_progress_bar"
+            app:layout_constraintStart_toStartOf="@+id/working_out_progress_bar"
+            app:layout_constraintTop_toTopOf="@+id/working_out_progress_bar" />
+
+        <TextView
+            android:id="@+id/working_out_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="3/6"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/working_out_progress_bar"
+            app:layout_constraintEnd_toEndOf="@+id/working_out_progress_bar"
+            app:layout_constraintStart_toStartOf="@+id/working_out_progress_bar"
+            app:layout_constraintTop_toTopOf="@+id/working_out_progress_bar" />
+
         <ProgressBar
             android:id="@+id/points_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="40dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/shape_circle_background"
+            android:progressDrawable="@drawable/shape_circular_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/working_out_progress_bar"
             app:layout_constraintTop_toBottomOf="@+id/lineChart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="БАЛЛЫ"
+            android:textColor="@color/text_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/points_progress_bar"
+            app:layout_constraintEnd_toEndOf="@+id/points_progress_bar"
+            app:layout_constraintStart_toStartOf="@+id/points_progress_bar"
+            app:layout_constraintTop_toTopOf="@+id/points_progress_bar" />
+
+        <TextView
+            android:id="@+id/points_progress_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="600"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/points_progress_bar"
+            app:layout_constraintEnd_toEndOf="@+id/points_progress_bar"
+            app:layout_constraintStart_toStartOf="@+id/points_progress_bar"
+            app:layout_constraintTop_toTopOf="@+id/points_progress_bar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
