@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ivider_decoration.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/shape_circle_background.xml" value="0.302" />
+        <entry key="app/src/main/res/drawable/shape_circular_progress.xml" value="0.302" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.3392210144927536" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3392210144927536" />
@@ -25,6 +27,7 @@
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.3392210144927536" />
         <entry key="app/src/main/res/layout/kids_item_layout.xml" value="0.3392210144927536" />
         <entry key="app/src/main/res/layout/news_item_layout.xml" value="0.33061594202898553" />
+        <entry key="app/src/main/res/layout/text_for_kids_profile_recycler.xml" value="0.5" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35625" />
       </map>
     </option>
