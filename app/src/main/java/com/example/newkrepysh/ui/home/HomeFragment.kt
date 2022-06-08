@@ -9,14 +9,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newkrepysh.ComponentManager
+import com.example.newkrepysh.utils.ComponentManager
 import com.example.newkrepysh.R
 import com.example.newkrepysh.databinding.FragmentHomeBinding
 import com.example.newkrepysh.entities.Childs
-import com.example.newkrepysh.entities.User
-import com.example.newkrepysh.entities.news.DataForNews
 import com.example.newkrepysh.factory.ViewModelFactory
-import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapter
 import com.example.newkrepysh.ui.dashboard.PerformClickFromAdapterForKid
 import com.example.newkrepysh.ui.home.recycler.HomeAdapter
 import javax.inject.Inject

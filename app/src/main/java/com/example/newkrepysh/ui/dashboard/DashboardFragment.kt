@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newkrepysh.ComponentManager
+import com.example.newkrepysh.utils.ComponentManager
 import com.example.newkrepysh.databinding.FragmentDashboardBinding
 import com.example.newkrepysh.entities.news.DataForNews
 import com.example.newkrepysh.factory.ViewModelFactory
@@ -16,6 +16,8 @@ import com.example.newkrepysh.ui.dashboard.recycler.NewsAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.text.SimpleDateFormat
 import javax.inject.Inject
 
 class DashboardFragment : Fragment(), PerformClickFromAdapter {
@@ -54,13 +56,16 @@ class DashboardFragment : Fragment(), PerformClickFromAdapter {
         super.onViewCreated(view, savedInstanceState)
         CoroutineScope(Dispatchers.IO).launch {
             model.getDataFromApi()
+            withContext(Dispatchers.Main){
+                model.list.observe(viewLifecycleOwner){
+                    list = it
+                    adapter.update(it)
+
+                }
+            }
         }
 
-        model.list.observe(viewLifecycleOwner){
-            list = it
-            adapter.update(it)
 
-        }
     }
 
     override fun onDestroyView() {

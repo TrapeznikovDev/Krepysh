@@ -23,14 +23,12 @@ class Repository  @Inject constructor(val db: RoomApp, val api: Api){
                 db.dao().insertChild(child) } }
 
         }
-//        it.user?.media?.forEach { db.dao().insertMedia(it) }
     }
     fun getKidsFromDb(): List<Childs>{
         return db.dao().getChild()
     }
 
     fun getUserFromDB(id: Int): User {
-
         return db.dao().getUser(id)
     }
 

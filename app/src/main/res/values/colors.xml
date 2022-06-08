@@ -14,5 +14,7 @@
     <color name="circle_background">#FEE4CE</color>
     <color name="background_view_grey">#F5F5F5</color>
     <color name="background_peach">#FBE5D2</color>
-
+    <color name="strength_text_color">#E6856B</color>
+    <color name="agility_text_color">#8CAEAE</color>
+    <color name="speed_text_color">#EBB65B</color>
 </resources>

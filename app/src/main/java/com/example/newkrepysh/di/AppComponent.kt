@@ -1,7 +1,7 @@
 package com.example.newkrepysh.di
 
 import android.content.Context
-import com.example.newkrepysh.MainApplication
+import com.example.newkrepysh.utils.MainApplication
 import com.example.newkrepysh.modules.ViewModelModule
 import com.example.newkrepysh.modules.RepositoryModule
 import com.example.newkrepysh.di.retrofit.Api

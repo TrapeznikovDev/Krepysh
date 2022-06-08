@@ -36,7 +36,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/newsDescriptionFragment"
-        android:name="com.example.newkrepysh.ui.NewsDescriptionFragment"
+        android:name="com.example.newkrepysh.ui.dashboard.NewsDescriptionFragment"
         android:label="fragment_news_description"
         tools:layout="@layout/fragment_news_description" >
         <argument
@@ -53,6 +53,21 @@
             android:name="child_id"
             app:argType="integer" />
         <argument android:name="user_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_kidsProfileFragment_to_timetableFragment"
+            app:destination="@id/timetableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.newkrepysh.ui.timetable.TimetableFragment"
+        android:label="fragment_timetable"
+        tools:layout="@layout/fragment_timetable" >
+        <argument
+            android:name="child_id"
+            app:argType="integer" />
+        <argument
+            android:name="user_id"
             app:argType="integer" />
     </fragment>
 
