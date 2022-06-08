@@ -1,4 +1,4 @@
-package com.example.newkrepysh.ui
+package com.example.newkrepysh.ui.dashboard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

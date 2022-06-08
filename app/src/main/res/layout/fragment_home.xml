@@ -8,6 +8,8 @@
     tools:context=".ui.home.HomeFragment"
     android:background="@color/background_grey">
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="100dp"

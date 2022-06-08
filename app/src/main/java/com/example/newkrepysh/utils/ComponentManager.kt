@@ -1,4 +1,4 @@
-package com.example.newkrepysh
+package com.example.newkrepysh.utils
 
 import android.app.Activity
 import android.app.Application

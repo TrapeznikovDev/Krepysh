@@ -1,13 +1,14 @@
 package com.example.newkrepysh.modules
 
 import androidx.lifecycle.ViewModel
-import com.example.newkrepysh.ViewModelKey
+import com.example.newkrepysh.utils.ViewModelKey
 import com.example.newkrepysh.activities.AuthActivityViewModel
 
 import com.example.newkrepysh.ui.dashboard.DashboardViewModel
 import com.example.newkrepysh.ui.home.HomeViewModel
 import com.example.newkrepysh.ui.notifications.NotificationsViewModel
 import com.example.newkrepysh.ui.profile.KidsProfileViewModel
+import com.example.newkrepysh.ui.timetable.TimetableViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -40,5 +41,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(KidsProfileViewModel::class)
     internal abstract fun kidsProfileViewModel(kidsProfileViewModel: KidsProfileViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(TimetableViewModel::class)
+    internal abstract fun timetableViewModel(timetableViewModel: TimetableViewModel): ViewModel
 
 }

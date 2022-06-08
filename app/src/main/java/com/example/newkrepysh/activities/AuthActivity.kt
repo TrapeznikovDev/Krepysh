@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
-import com.example.newkrepysh.ComponentManager
+import com.example.newkrepysh.utils.ComponentManager
 import com.example.newkrepysh.ui.main.MainActivity
 import com.example.newkrepysh.R
 import com.example.newkrepysh.databinding.ActivityAuthBinding
